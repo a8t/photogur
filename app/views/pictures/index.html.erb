@@ -1,1 +1,12 @@
 <h1>Pictures</h1>
+
+<%= link_to "New Picture", new_picture_path %>
+
+<% @pictures.each do |each_picture| %>
+
+  <div class = "pic">
+  <%= render "display", picture: each_picture %>
+  <%= link_to "More", picture_path(each_picture) %>
+  </div>
+
+<% end %>

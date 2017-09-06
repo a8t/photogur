@@ -1,0 +1,7 @@
+<%= render "display", picture: @picture %>
+
+  <%= link_to "Edit", edit_picture_path %>
+  <%= link_to 'Delete picture', picture_path(@picture),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+  <%= link_to "Return", pictures_path %>
